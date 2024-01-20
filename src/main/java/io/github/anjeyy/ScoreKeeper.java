@@ -4,8 +4,6 @@ public class ScoreKeeper {
 
     private final BasketballScore homeTeamScore;
     private final BasketballScore awayTeamScore;
-    private int teamScoreA = 0;
-    private int teamScoreB = 0;
 
     private ScoreKeeper() {
         homeTeamScore = BasketballScore.create();
@@ -18,30 +16,30 @@ public class ScoreKeeper {
     }
 
     public String score() {
-        return ScorePrinter.printScore(teamScoreA, teamScoreB);
+        return ScorePrinter.printScore(homeTeamScore.score(), awayTeamScore.score());
     }
 
     public void scoreTeamA1() {
-        teamScoreA = teamScoreA + 1;
+        homeTeamScore.freeThrow();
     }
 
     public void scoreTeamA2() {
-        teamScoreA = teamScoreA + 2;
+        homeTeamScore.twoPointFieldGoal();
     }
 
     public void scoreTeamA3() {
-        teamScoreA = teamScoreA + 3;
+        homeTeamScore.threePointFieldGoal();
     }
 
     public void scoreTeamB1() {
-        teamScoreB = teamScoreB + 1;
+        awayTeamScore.freeThrow();
     }
 
     public void scoreTeamB2() {
-        teamScoreB = teamScoreB + 2;
+        awayTeamScore.twoPointFieldGoal();
     }
 
     public void scoreTeamB3() {
-        teamScoreB = teamScoreB + 3;
+        awayTeamScore.threePointFieldGoal();
     }
 }
