@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 class ScoreKeeperTest {
 
-
     @Test
     void shouldDisplayScore() {
         ScoreKeeper scoreKeeper = ScoreKeeper.start();
@@ -13,7 +12,6 @@ class ScoreKeeperTest {
 
         Assertions.assertThat(actualScore).isEqualTo("000:000");
     }
-
 
     @Test
     void scoreTeamA() {

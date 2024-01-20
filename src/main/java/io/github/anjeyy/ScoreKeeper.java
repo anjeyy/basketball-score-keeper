@@ -19,13 +19,7 @@ public class ScoreKeeper {
     }
 
     private String prettyPrint(int score) {
-        String scoreAsString = String.valueOf(score);
-        StringBuilder stringBuilder = new StringBuilder(3);
-        for (int i = scoreAsString.length(); i < 3; i++) {
-            stringBuilder.append("0");
-        }
-        stringBuilder.append(scoreAsString);
-        return stringBuilder.toString();
+        return ScorePrinter.pretty(score);
     }
 
     public void scoreTeamA1() {
