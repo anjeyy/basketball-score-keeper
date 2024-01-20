@@ -2,10 +2,15 @@ package io.github.anjeyy;
 
 public class ScoreKeeper {
 
+    private final BasketballScore homeTeamScore;
+    private final BasketballScore awayTeamScore;
     private int teamScoreA = 0;
     private int teamScoreB = 0;
 
-    private ScoreKeeper() {}
+    private ScoreKeeper() {
+        homeTeamScore = BasketballScore.create();
+        awayTeamScore = BasketballScore.create();
+    }
 
 
     public static ScoreKeeper start() {
