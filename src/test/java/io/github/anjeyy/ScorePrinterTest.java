@@ -7,19 +7,20 @@ class ScorePrinterTest {
 
     @Test
     void shouldPrettyPrintBasketballSingleScore() {
-        String singleScore = ScorePrinter.pretty(0);
-        Assertions.assertThat(singleScore).isEqualTo("000");
+        String doubleScore = ScorePrinter.printScore(0, 1);
+        Assertions.assertThat(doubleScore).isEqualTo("000:001");
     }
 
     @Test
     void shouldPrettyPrintBasketballDoubleScore() {
-        String doubleScore = ScorePrinter.pretty(12);
-        Assertions.assertThat(doubleScore).isEqualTo("012");
+        String doubleScore = ScorePrinter.printScore(8, 21);
+        Assertions.assertThat(doubleScore).isEqualTo("008:021");
     }
 
     @Test
     void shouldPrettyPrintBasketballTripleScore() {
-        String doubleScore = ScorePrinter.pretty(112);
-        Assertions.assertThat(doubleScore).isEqualTo("112");
+        String doubleScore = ScorePrinter.printScore(98, 101);
+        Assertions.assertThat(doubleScore).isEqualTo("098:101");
     }
+
 }

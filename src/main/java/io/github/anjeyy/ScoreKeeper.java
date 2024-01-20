@@ -13,13 +13,7 @@ public class ScoreKeeper {
     }
 
     public String score() {
-        String prettyTeamScoreA = prettyPrint(teamScoreA);
-        String prettyTeamScoreB = prettyPrint(teamScoreB);
-        return "%s:%s".formatted(prettyTeamScoreA, prettyTeamScoreB);
-    }
-
-    private String prettyPrint(int score) {
-        return ScorePrinter.pretty(score);
+        return ScorePrinter.printScore(teamScoreA, teamScoreB);
     }
 
     public void scoreTeamA1() {
