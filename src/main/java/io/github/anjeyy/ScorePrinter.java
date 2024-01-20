@@ -6,6 +6,10 @@ public class ScorePrinter {
         throw new UnsupportedOperationException("No instance allowed.");
     }
 
+    public static String printScore(BasketballScore homeTeam, BasketballScore awayTeam) {
+        return printScore(homeTeam.score(), awayTeam.score());
+    }
+
     public static String printScore(int homeTeam, int awayTeam) {
         String prettyTeamScoreA = pretty(homeTeam);
         String prettyTeamScoreB = pretty(awayTeam);

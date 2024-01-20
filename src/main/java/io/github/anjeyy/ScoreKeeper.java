@@ -16,7 +16,7 @@ public class ScoreKeeper {
     }
 
     public String score() {
-        return ScorePrinter.printScore(homeTeamScore.score(), awayTeamScore.score());
+        return ScorePrinter.printScore(homeTeamScore, awayTeamScore);
     }
 
     public void scoreTeamA1() {
